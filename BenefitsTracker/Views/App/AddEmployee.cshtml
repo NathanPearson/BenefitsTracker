@@ -1,0 +1,61 @@
+﻿@model AddEmployeeViewModel
+
+@section Scripts {
+    <script src="~/node_modules/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="~/node_modules/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.min.js"></script>
+}
+<div class="col-md-6 offset-md-3">
+    <div class="card card-body bg-light">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly"></div>
+            <div class="form-group">
+                <label asp-for="Name">Your Name:</label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            @*TODO Make dependents Dynamic with checkbox and add dependent button*@
+
+            <div class="form-group">
+                <label asp-for="HasDependents">Have Dependents:</label>
+                <input type="checkbox" asp-for="HasDependents" class="form-control" />                
+            </div>
+            <div id="dependents">
+                <div class="form-group">
+                    <label asp-for="FirstDependent">Dependent 1:</label>
+                    <input type="text" asp-for="FirstDependent" class="form-control" />
+                    <span asp-validation-for="FirstDependent" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="SecondDependent">Dependent 2:</label>
+                    <input type="text" asp-for="SecondDependent" class="form-control" />
+                    <span asp-validation-for="SecondDependent" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="ThirdDependent">Dependent 3:</label>
+                    <input type="text" asp-for="ThirdDependent" class="form-control" />
+                    <span asp-validation-for="ThirdDependent" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="FourthDependent">Dependent 4:</label>
+                    <input type="text" asp-for="FourthDependent" class="form-control" />
+                    <span asp-validation-for="FourthDependent" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="FifthDependent">Dependent 5:</label>
+                    <input type="text" asp-for="FifthDependent" class="form-control" />
+                    <span asp-validation-for="FifthDependent" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="SixthDependent">Dependent 5:</label>
+                    <input type="text" asp-for="SixthDependent" class="form-control" />
+                    <span asp-validation-for="SixthDependent" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary btn-lg"><i class="fa fa-plus"></i> Add Employee</button>
+                <div class="text-success">@ViewBag.UserMessage</div>
+            </div>
+        </form>
+    </div>
+</div>

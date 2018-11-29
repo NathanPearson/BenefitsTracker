@@ -1,0 +1,152 @@
+[
+  {
+    "Id": 0,
+    "Name": "Nathan Pearson",
+    "EmployeeCost": 1000,
+    "HasDependents": 1,
+    "FirstDependent": "Christan Pearson",
+    "SecondDependent": "Alexis Pearson",
+    "ThirdDependent": "Carter Hill",
+    "FourthDependent": "Avery Pearson",
+    "FifthDependent": "Giada Pearson",
+    "SixthDependent": "Bentley Pearson",
+    "FirstDependentCost": 500,
+    "SecondDependentCost": 450,
+    "ThirdDependentCost": 500,
+    "FourthDependentCost": 450,
+    "FifthDependentCost": 500,
+    "SixthDependentCost": 500,
+    "TotalCosts": 3900,    
+    "Salary": 52000,
+    "AfterDeductionSalary": 48100    
+  },
+  {
+    "Id": 0,
+    "Name": "Action Jackson",
+    "EmployeeCost": 900,
+    "HasDependents": 0,
+    "TotalCosts": 900,    
+    "Salary": 52000,
+    "AfterDeductionSalary": 51100    
+  },
+  {
+    "Id": 0,
+    "Name": "Marcus Parks",
+    "EmployeeCost": 1000,
+    "HasDependents": 0,
+    "TotalCosts": 1000,
+    "Salary": 52000,
+    "AfterDeductionSalary": 51000
+  },
+  {
+    "Id": 0,
+    "Name": "Walter White",
+    "EmployeeCost": 1000,
+    "HasDependents": 1,
+    "FirstDependent": "Skyler White",
+    "SecondDependent": "Walt White Jr.",
+    "FirstDependentCost": 500,
+    "SecondDependentCost": 500,
+    "TotalCosts": 2000,
+    "Salary": 52000,
+    "AfterDeductionSalary": 50000
+  },
+  {
+    "Id": 0,
+    "Name": "Mike Freeman",
+    "EmployeeCost": 1000,
+    "HasDependents": 1,
+    "FirstDependent": "Joan Freeman",
+    "SecondDependent": "Aston Martin",
+    "FirstDependentCost": 500,
+    "SecondDependentCost": 450,
+    "TotalCosts": 1950,
+    "Salary": 52000,
+    "AfterDeductionSalary": 50050
+  }
+]
+
+/* strarterdata for parent child entities
+[
+  {
+    "Id": 0,
+    "Name": "Nathan Pearson",
+    "EmployeeCost": 1000,
+    "HasDependents": 1,
+    "Dependents": [
+      {
+        "Name": "Christan Pearson",
+        "Cost": 500
+      },
+      {
+        "Name": "Alexis Pearson",
+        "Cost": 450
+      },
+      {
+        "Name": "Carter Hill",
+        "Cost": 500
+      },
+      {
+        "Name": "Avery Pearson",
+        "Cost": 450
+      },
+      {
+        "Name": "Giada Pearson",
+        "Cost": 500
+      },
+      {
+        "Name": "Glenn Principe",
+        "Cost": 500
+      }
+    ],
+    "TotalCosts": 3900
+  },
+  {
+    "Id": 0,
+    "Name": "Action Jackson",
+    "EmployeeCost": 900,
+    "HasDependents": 0,
+    "TotalCosts": 900
+  },
+  {
+    "Id": 0,
+    "Name": "Marcus Parks",
+    "EmployeeCost": 1000,
+    "HasDependents": 0,
+    "TotalCosts": 1000
+  },
+  {
+    "Id": 0,
+    "Name": "Walter White",
+    "EmployeeCost": 1000,
+    "HasDependents": 1,
+    "Dependents": [
+      {
+        "Name": "Skyler White",
+        "Cost": 500
+      },
+      {
+        "Name": "Walt White Jr.",
+        "Cost": 500
+      }
+    ],
+    "TotalCosts": 2000
+  },
+  {
+    "Id": 0,
+    "Name": "Mike Freeman",
+    "EmployeeCost": 1000,
+    "HasDependents": 1,
+    "Dependents": [
+      {
+        "Name": "Joan Freeman",
+        "Cost": 500
+      },
+      {
+        "Name": "Aston Martin",
+        "Cost": 450
+      }
+    ],    
+    "TotalCosts": 1950
+  }
+]*/

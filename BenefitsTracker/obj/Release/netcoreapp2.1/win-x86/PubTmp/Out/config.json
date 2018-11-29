@@ -1,0 +1,5 @@
+{
+  "ConnectionStrings": {
+    "TrackerConnectionString": "server=(localdb)\\ProjectsV13;Database=BenefitsTrackerDb;Integrated Security=true;MultipleActiveResultSets=True;"
+  }
+}

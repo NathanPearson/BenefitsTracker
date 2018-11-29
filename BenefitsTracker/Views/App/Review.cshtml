@@ -1,0 +1,75 @@
+﻿@model IEnumerable<Employee>
+@{    
+    int totalEmployeeCosts = 0;
+}
+<h1>Employee Cost Yearly</h1>
+
+<p>Current Total Number of Employees: @Model.Count()</p>
+
+<br />
+    @(Html
+            .Grid(Model)
+            .Build(columns =>
+            {
+                columns.Add(model => model.Name).Titled("Name");
+                columns.Add(model => model.AfterDeductionSalary.ToString("C2")).Titled("Salary After Deductions");
+                columns.Add(model => model.TotalCosts.ToString("C2")).Titled("Total Cost");
+                columns.Add(model => model.EmployeeCost.ToString("C2")).Titled("Employee's Individual Cost");
+                columns.Add(model => model.HasDependents).Titled("Has Dependents");
+                columns.Add(model => model.FirstDependent).Titled("1st Dep");
+                columns.Add(model => model.FirstDependentCost.ToString("C2")).Titled("1st Dep Cost");
+                columns.Add(model => model.SecondDependent).Titled("2nd Dep");
+                columns.Add(model => model.SecondDependentCost.ToString("C2")).Titled("2nd Dep Cost");
+                columns.Add(model => model.ThirdDependent).Titled("3rd Dep");
+                columns.Add(model => model.ThirdDependentCost.ToString("C2")).Titled("3rd Dep Cost");
+                columns.Add(model => model.FourthDependent).Titled("4th Dep");
+                columns.Add(model => model.FourthDependentCost.ToString("C2")).Titled("4th Dep Cost");
+                columns.Add(model => model.FifthDependent).Titled("5th Dep");
+                columns.Add(model => model.FifthDependentCost.ToString("C2")).Titled("5th Dep Cost");
+                columns.Add(model => model.SixthDependent).Titled("6th Dep");
+                columns.Add(model => model.SixthDependentCost.ToString("C2")).Titled("6th Dep Cost");
+            })
+            .Sortable()
+            .Pageable()
+    )
+
+@foreach (var emp in Model)
+{
+        totalEmployeeCosts += emp.TotalCosts;
+    }
+
+<br />
+<h2 class="text-center"> Your Total Employee Cost Yearly is @totalEmployeeCosts.ToString("C2")</h2>
+
+
+@*@foreach (var emp in Model)
+    {
+        <section>
+            <div class="row col-xs-12">
+                Employee Id: @emp.Id | Employee Name: @emp.Name | Employee Has Dependents :
+                    @if (emp.HasDependents)
+                    {
+                        dependents = "Yes";  @dependents
+                    }
+                    else
+                    {
+                        @dependents
+                    }
+            </div>
+            @if (dependents.Equals("Yes"))
+            {
+            <div class="row col-xs-12">
+                <div class="col-xs-12 col-md-2">Dependent 1: @emp.FirstDependent</div>
+                <div class="col-xs-12 col-md-2">Dependent 2: @emp.SecondDependent</div>
+                <div class="col-xs-12 col-md-2">Dependent 3: @emp.ThirdDependent</div>
+                <div class="col-xs-12 col-md-2">Dependent 4: @emp.FourthDependent</div>
+                <div class="col-xs-12 col-md-2">Dependent 5: @emp.FifthDependent</div>
+                <div class="col-xs-12 col-md-2">Dependent 6: @emp.SixthDependent</div>
+            </div>
+            }
+            <div class="row col-xs-12">@emp.TotalCosts</div>
+        </section>
+        @(totalEmployeeCosts += @emp.TotalCosts);
+    }
+
+    <div class="text-center total">Total Yearly Cost is @totalEmployeeCosts</div>*@
